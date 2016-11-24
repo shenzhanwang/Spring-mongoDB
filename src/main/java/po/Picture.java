@@ -8,18 +8,21 @@ public class Picture {
 	@Id
 	private String id;
 	private String filename;
-	private long size;
-	private byte[] b;
+	private String path;
+	private Long size;
 	
 	public Picture(){}
 	
-	public Picture(String filename,long size,byte[] b){
-		this.filename=filename;
-		this.size=size;
-		this.b=b;
+	
+
+	public Picture( String filename, String path, Long size) {
+		this.filename = filename;
+		this.path = path;
+		this.size = size;
 	}
-	
-	
+
+
+
 	public String getId() {
 		return id;
 	}
@@ -34,19 +37,22 @@ public class Picture {
 	public void setFilename(String filename) {
 		this.filename = filename;
 	}
-	public long getSize() {
+	
+
+	public Long getSize() {
 		return size;
 	}
-	public void setSize(long size) {
+
+	public void setSize(Long size) {
 		this.size = size;
 	}
 
-	public byte[] getB() {
-		return b;
+	public String getPath() {
+		return path;
 	}
 
-	public void setB(byte[] b) {
-		this.b = b;
+	public void setPath(String path) {
+		this.path = path;
 	}
 	
 }

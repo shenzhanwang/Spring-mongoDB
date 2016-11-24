@@ -1,13 +1,13 @@
 package pagemodel;
 
 import java.util.List;
-import po.Picture;
 
-public class PicGrid {
+
+public class DataGrid<T> {
 	private int current;//当前页面号
 	private int rowCount;//每页行数
 	private int total;//总行数
-	private List<Picture> rows;
+	private List<T> rows;
 	public int getCurrent() {
 		return current;
 	}
@@ -26,13 +26,11 @@ public class PicGrid {
 	public void setTotal(int total) {
 		this.total = total;
 	}
-	public List<Picture> getRows() {
+	public List<T> getRows() {
 		return rows;
 	}
-	public void setRows(List<Picture> rows) {
+	public void setRows(List<T> rows) {
 		this.rows = rows;
 	}
-	
-	
 	
 }

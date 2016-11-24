@@ -18,6 +18,6 @@ public class ApplicationConfig extends AbstractMongoConfiguration {
 
   @Override
   protected String getDatabaseName() {
-    return "springdata";
+    return "Spring-nosql";
   }
 }
