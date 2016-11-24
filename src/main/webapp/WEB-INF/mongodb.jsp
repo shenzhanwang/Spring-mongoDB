@@ -80,10 +80,15 @@ $(document).ready(function(){
 	    grid.find(".command-edit").on("click", function(e)
 	    {
 	        $(".modal").modal();
+	        if($("#id").length <= 0)//不存在隐藏域
+	        {
+	        	$("form").append('<input type="hidden" id="id" name="id" />  ');
+	        }
 	        $("#filename").val($(this).data("filename"));  
 	        $("#path").val($(this).data("path"));  
 	        $("#size").val($(this).data("size")); 
 	        $("#id").val($(this).data("row-id"));  
+	        
 	    }).end().find(".command-delete").on("click", function(e)
     {
          $.ajax({url:"picture/"+$(this).data("row-id"),type:"DELETE",success:function(result){
