@@ -24,16 +24,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Spring-nosql</a>
+      <a class="navbar-brand" href="#">Spring-mangoDB</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="index">MongoDB</a></li>
-        <li><a href="#">Redis</a></li>
-        <li><a href="#">Hadoop Database</a></li>
-        <li><a href="#">Neo4j</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -64,6 +61,7 @@ $(document).ready(function(){
     var grid =$("#grid-data").bootgrid({
     ajax:true,
     url:"pictures",
+    navigation:2,
     formatters: {
     "commands": function(column, row)
      {

@@ -35,7 +35,7 @@ public class MongodbController {
 		return grid;
 	}
 	
-	@RequestMapping("/index")
+	@RequestMapping(value="/index")
 	public String showpic(){
 		return "mongodb";
 	}

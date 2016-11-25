@@ -27,21 +27,21 @@
 <mvc:resources location="/css/"  mapping="/css/**" />  
 <!-- 页面转向解析 -->
 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-	<property name="prefix" value="/WEB-INF/content/" />
+	<property name="prefix" value="/WEB-INF/" />
 	<property name="suffix" value=".jsp" />
 </bean>	
-<!-- 处理请求时返回json字符串的中文乱码问题 -->
-    <mvc:annotation-driven>
-        <mvc:message-converters>
-            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
-                <property name="supportedMediaTypes">
-                    <list>
-                        <value>application/json;charset=UTF-8</value>
-                    </list>
-                </property>
-            </bean>
-        </mvc:message-converters>
-    </mvc:annotation-driven>
+<!-- 处理请求时返回json字符串的中文乱码问题 ,@responsebody直接返回json-->
+    <mvc:annotation-driven>  
+        <mvc:message-converters>  
+            <bean id="fastJsonHttpMessageConverter" class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">  
+                <property name="supportedMediaTypes">  
+                    <list>  
+                        <value>application/json;charset=UTF-8</value>  
+                    </list>  
+                </property>  
+            </bean>  
+        </mvc:message-converters>   
+    </mvc:annotation-driven>  
 <!-- 文件上传 -->
 <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 </bean>
