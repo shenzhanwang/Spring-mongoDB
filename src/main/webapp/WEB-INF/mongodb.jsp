@@ -4,11 +4,11 @@
 <html>
   <head>
     <title>Spring连接mongodb</title>
-    <script src="/Spring-nosql/js/jquery-1.12.3.min.js"></script>
+    <script src="/Spring-mongoDB/js/jquery-1.12.3.min.js"></script>
 <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="/Spring-nosql/css/jquery.bootgrid.min.css">
+<link rel="stylesheet" href="/Spring-mongoDB/css/jquery.bootgrid.min.css">
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="/Spring-nosql/js/jquery.bootgrid.min.js"></script>
+<script src="/Spring-mongoDB/js/jquery.bootgrid.min.js"></script>
   </head>
   <body>
     <div class="container">
