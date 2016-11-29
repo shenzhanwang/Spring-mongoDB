@@ -2,6 +2,8 @@ package controller;
 
 import java.util.List;
 
+
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -24,8 +26,8 @@ public class MongodbController {
 	
 	@RequestMapping(value="/pictures", method=RequestMethod.GET)
 	@ResponseBody
-	public DataGrid<Picture> getpiclist(@RequestParam("current") int current,@RequestParam("rowCount") int rowCount){
-		List<Picture> list=mongodbService.getpiclist(current,rowCount);
+	public DataGrid<Picture> getpiclist(@RequestParam("current") int current,@RequestParam("rowCount") int rowCount,@RequestParam(required=false,value="sort[id]")String sortid){
+		List<Picture> list=mongodbService.getpiclist(current,rowCount,sortid);
 		int total=mongodbService.getpicturenum();
 		DataGrid<Picture> grid=new DataGrid<Picture>();
 		grid.setCurrent(current);

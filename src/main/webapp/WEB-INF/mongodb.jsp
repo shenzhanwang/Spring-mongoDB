@@ -46,9 +46,9 @@
         <thead>
             <tr>
                 <th data-column-id="id"  data-identifier="true">id</th>
-                <th data-column-id="filename">filename</th>
-                <th data-column-id="path">path</th>
-                <th data-column-id="size">size</th>
+                <th data-column-id="filename" data-sortable="false">filename</th>
+                <th data-column-id="path" data-sortable="false">path</th>
+                <th data-column-id="size" data-sortable="false">size</th>
                 <th data-column-id="commands" data-formatter="commands" data-sortable="false">modify</th>
             </tr>
         </thead>

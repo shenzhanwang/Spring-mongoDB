@@ -8,4 +8,5 @@ import po.Picture;
 public interface PictureRepository extends MongoRepository<Picture, String>{
 	Picture findById(String id);
 	Page<Picture> findAll(Pageable pageable);
+	
 }
