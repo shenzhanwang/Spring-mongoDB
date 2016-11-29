@@ -26,7 +26,10 @@ public class MongodbController {
 	
 	@RequestMapping(value="/pictures", method=RequestMethod.GET)
 	@ResponseBody
-	public DataGrid<Picture> getpiclist(@RequestParam("current") int current,@RequestParam("rowCount") int rowCount,@RequestParam(required=false,value="sort[id]")String sortid){
+	public DataGrid<Picture> getpiclist(@RequestParam("current") int current,@RequestParam("rowCount") int rowCount
+			,@RequestParam(required=false,value="sort[id]")String sortid
+			,@RequestParam(required=false,value="searchPhrase")String searchPhrase){
+		if(searchPhrase==null){
 		List<Picture> list=mongodbService.getpiclist(current,rowCount,sortid);
 		int total=mongodbService.getpicturenum();
 		DataGrid<Picture> grid=new DataGrid<Picture>();
@@ -35,6 +38,16 @@ public class MongodbController {
 		grid.setRows(list);
 		grid.setTotal(total);
 		return grid;
+		}else{
+			List<Picture> list=mongodbService.getsearchresult(current, rowCount, sortid, searchPhrase);
+			int total=mongodbService.getsearchresulttotal(searchPhrase);
+			DataGrid<Picture> grid=new DataGrid<Picture>();
+			grid.setCurrent(current);
+			grid.setRowCount(rowCount);
+			grid.setRows(list);
+			grid.setTotal(total);
+			return grid;
+		}
 	}
 	
 	@RequestMapping(value="/index")

@@ -42,6 +42,18 @@
   		<div class="col-md-12">
   		<h2>对MongoDB进行CRUD</h2>
   	<button type="button" id="add" class="btn btn-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add</button>
+  	<br>
+  	<div class="row">
+  	<form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="filename" class="col-sm-2 control-label">filename</label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" id="filename2" placeholder="filename">
+    </div>
+    <button type="button" id="search" class="btn btn-primary">search<span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+  </div>
+</form>
+  	</div>
   	<table id="grid-data" class="table table-condensed table-hover table-striped">
         <thead>
             <tr>
@@ -95,7 +107,15 @@ $(document).ready(function(){
     	 }});
     });
   	});
+  	$("#search").click(function(){
+  		$("#grid-data").bootgrid("search", $("#filename2").val());
+  	});
+  	
+  	
   });
+  function trim(s){
+    return s.replace(/(^\s*)|(\s*$)/g, "");
+}
   </script>
 <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
   <div class="modal-dialog modal-sm">

@@ -49,6 +49,24 @@ public class MongodbServiceImpl implements PictureService{
 		pictureRepository.save(p);
 	}
 
+	public List<Picture> getsearchresult(int current, int rowCount,
+			String sortid, String search) {
+		PageRequest pr;
+		if("asc".equals(sortid))
+			pr =new PageRequest(--current, rowCount,Direction.ASC,"id");
+		else if("desc".equals(sortid))
+			pr =new PageRequest(--current, rowCount,Direction.DESC,"id");
+		else 
+			pr =new PageRequest(--current, rowCount);
+		Page<Picture> page=pictureRepository.findByFilenameContaining(search, pr);
+		return page.getContent();
+	}
+
+	public int getsearchresulttotal(String search) {
+		List<Picture> list=pictureRepository.findByFilenameContaining(search);
+		return list.size();
+	}
+
 
 
 }

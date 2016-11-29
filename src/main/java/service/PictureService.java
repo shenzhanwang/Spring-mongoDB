@@ -10,4 +10,6 @@ public interface PictureService{
 	Picture getPictureByid(String id);//使用主键获取记录
 	void SaveorUpdatePicture(Picture p);
 	void deletePicture(String id);
+	List<Picture> getsearchresult(int current,int rowCount,String sortid,String search);//获取一页搜索结果
+	int getsearchresulttotal(String search);//获取搜索结果总数
 }
