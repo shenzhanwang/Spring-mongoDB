@@ -7,7 +7,12 @@
   
   3.包含按条件进行数据筛选的功能；
   
-  4.前端分页插件使用Bootgrid，前端框架使用Bootstrap。
+  4.前端分页插件使用Bootgrid，前端框架使用Bootstrap；
+  
+  5.使用时，先开启mongoDB，新建数据库Spring-nosql;
+  
+  6.页面访问入口http://localhost:8080/Spring-mongoDB/mongodb/index
+  
   
   本项目的实例文档模式如下：
   
