@@ -7,11 +7,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
-import mongodb.PictureRepository;
+import dao.PictureRepository;
 import po.Picture;
 import service.PictureService;
 
-@Service
+@Service("mongodbServiceImpl")
 public class MongodbServiceImpl implements PictureService{
 	
 	private PictureRepository pictureRepository;
