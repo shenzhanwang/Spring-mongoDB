@@ -15,21 +15,24 @@
   
   
   本项目的实例文档模式如下：
-  
-  {
+```
+{
     "_id" : ObjectId("58369d57eab6bfd4371a5d37"),
     "_class" : "po.Picture",
     "filename" : "activiti教程",
     "path" : "f盘",
     "size" : NumberLong(9765)
   }
+```
+  
+  
   
   效果图
-  ![alt text](https://github.com/shenzhanwang/Spring-mongoDB/blob/master/%E6%88%AA%E5%9B%BE/1.jpg)
-  
-  ![alt text](https://github.com/shenzhanwang/Spring-mongoDB/blob/master/%E6%88%AA%E5%9B%BE/2.jpg)
-  
-  ![alt text](https://github.com/shenzhanwang/Spring-mongoDB/blob/master/%E6%88%AA%E5%9B%BE/3.jpg)
+
+![输入图片说明](http://git.oschina.net/uploads/images/2016/1129/204109_2e0eb116_1110335.jpeg "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/1129/204119_e64b2915_1110335.jpeg "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/1129/204131_df5ed465_1110335.jpeg "在这里输入图片标题")
+
 ### 附录：个人作品索引目录（持续更新）
 
 #### 基础篇:职业化，从做好OA系统开始
