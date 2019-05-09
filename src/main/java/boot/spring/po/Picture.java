@@ -1,9 +1,11 @@
-package po;
+package boot.spring.po;
+
+import java.io.Serializable;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-@Document(collection = "picture")
-public class Picture {
+//@Document(collection = "picture")
+public class Picture implements Serializable{
 	//pid供mongodb内部使用
 	@Id
 	private String id;
@@ -53,6 +55,13 @@ public class Picture {
 
 	public void setPath(String path) {
 		this.path = path;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Picture [id=" + id + ", filename=" + filename + ", path=" + path + ", size=" + size + "]";
 	}
 	
 }

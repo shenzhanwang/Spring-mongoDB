@@ -1,4 +1,4 @@
-package service.impl;
+package boot.spring.service.impl;
 
 import java.util.List;
 
@@ -8,9 +8,9 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
-import dao.PictureRepository;
-import po.Picture;
-import service.PictureService;
+import boot.spring.dao.PictureRepository;
+import boot.spring.po.Picture;
+import boot.spring.service.PictureService;
 
 @Service("mongodbServiceImpl")
 public class MongodbServiceImpl implements PictureService{
@@ -42,7 +42,9 @@ public class MongodbServiceImpl implements PictureService{
 	}
 
 	public void deletePicture(String id) {
-		pictureRepository.delete(id);
+		Picture pic=pictureRepository.findById(id);
+//		System.out.println(pic.toString());
+		pictureRepository.delete(pic);
 	}
 
 	public void SaveorUpdatePicture(Picture p) {

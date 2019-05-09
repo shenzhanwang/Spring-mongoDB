@@ -1,8 +1,6 @@
-package controller;
+package boot.spring.controller;
 
 import java.util.List;
-
-
 
 import javax.annotation.Resource;
 
@@ -14,13 +12,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import pagemodel.DataGrid;
-import po.Picture;
-import service.PictureService;
+import boot.spring.pagemodel.DataGrid;
+import boot.spring.po.Picture;
+import boot.spring.service.PictureService;
+
 
 @Controller
 @RequestMapping(value="/mongodb")
 public class MongodbController {
+	
 	@Resource(name="mongodbServiceImpl")
 	private PictureService mongodbService;
 	

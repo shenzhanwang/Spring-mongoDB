@@ -1,8 +1,8 @@
-package service;
+package boot.spring.service;
 
 import java.util.List;
 
-import po.Picture;
+import boot.spring.po.Picture;
 
 public interface PictureService{
 	List<Picture> getpiclist(int current,int rowCount,String sortid);//获取一页记录

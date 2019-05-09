@@ -1,4 +1,4 @@
-package pagemodel;
+package boot.spring.pagemodel;
 
 import java.util.List;
 
